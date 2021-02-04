@@ -7,5 +7,5 @@
 </div>
 <div mat-dialog-actions class="button">
     <button mat-button (click)="onNoClick()">No Thanks</button>
-    <button mat-button cdkFocusInitial>Join Now</button>
+    <button [routerLink]="['/room']" routerLinkActive="router-link-active" mat-button cdkFocusInitial>Join Now</button>
 </div>
