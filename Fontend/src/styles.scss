@@ -3,6 +3,28 @@
 // body{
 //     background-color: blueviolet;
 //   }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
 html,
 body {
     height: 100%;
@@ -17,6 +39,9 @@ body {
     font: 500 30px/45px Roboto, "Helvetica Neue", sans-serif;
     letter-spacing: normal;
     text-align: -webkit-center;
+    font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
+    letter-spacing: normal;
+    text-align: -webkit-center;
 }
 
 body {
@@ -26,6 +51,21 @@ body {
 @keyframes change {
     0% {
         background-color: rgb(225, 178, 172);
+    }
+    25% {
+        background-color: rgb(65, 196, 222);
+    }
+    50% {
+        background-color: rgb(140, 199, 63);
+    }
+    75% {
+        background-color: rgb(243, 211, 51);
+    }
+    100% {
+        background-color: rgb(247, 142, 86);
+    }
+    0% {
+        background-color: aquamarine;
     }
     25% {
         background-color: rgb(65, 196, 222);
