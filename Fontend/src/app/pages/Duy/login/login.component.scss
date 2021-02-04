@@ -8,8 +8,8 @@
   text-align: center;
   flex: 1 0 auto;
   padding: 0px 0.625rem;
-  padding-top: 300px;
-  background-color: rgb(246, 174, 186);
+  background-image: url("../../../../assets/Duy/Background\ Quiz.jpg");
+  height: 100%;
 }
 #logo-container {
   padding-top: 4.25rem;
@@ -24,4 +24,5 @@ button {
   width: 200px;
   color: rgb(243, 240, 237);
   background-color: #3f51b5;
+  font-size: 30px;
 }
