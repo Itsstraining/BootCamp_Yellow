@@ -5,9 +5,7 @@
     <button mat-raised-button>Start</button>
   </div>
   <div id="add">
-    <button (click)="add()" mat-raised-button style="margin-top: 100px">
-      Add
-    </button>
+    <button mat-raised-button style="margin-top: 100px">Add</button>
     <button mat-raised-button style="margin-top: 100px">Rm</button>
   </div>
   <div id="player" style="height: 400px">
@@ -15,10 +13,11 @@
       <button mat-raised-button value="Key">Key</button>
     </div>
     <div class="parent white">
-      <table>
+      <app-playerlist></app-playerlist>
+      <!-- <table>
         <tr>
           <td>
-            <button mat-raised-button value="text">{{ player.name }}</button>
+            <button mat-raised-button value="text"></button>
           </td>
           <td><button mat-raised-button value="text">P2</button></td>
           <td><button mat-raised-button value="text">P3</button></td>
@@ -49,7 +48,7 @@
           <td><button mat-raised-button value="text">P19</button></td>
           <td><button mat-raised-button value="text">P20</button></td>
         </tr>
-      </table>
+      </table> -->
     </div>
   </div>
 </div>
