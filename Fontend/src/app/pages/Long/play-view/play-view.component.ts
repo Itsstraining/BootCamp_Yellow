@@ -1,6 +1,8 @@
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef, Component, Input, OnDestroy, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
+import { UserService } from 'src/app/services/user.service';
 
 
 @Component({
@@ -20,7 +22,7 @@ export class PlayComponent implements OnDestroy,OnInit {
 
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,private quizData:DataService) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,private quizData:DataService,private userService: UserService, public router: Router){
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -37,7 +39,6 @@ export class PlayComponent implements OnDestroy,OnInit {
     if (this.data==null) {
       await this.getAllItems()
     }
-    console.log(this.data)
     this.getQuiz(this.num)
     
   }
@@ -48,30 +49,37 @@ export class PlayComponent implements OnDestroy,OnInit {
   
   async getQuiz(num){
     if (!this.data[num]) {
-      this.num = num -1
+      this.num = num
       return
     }
     this.question = this.data[num]
-    console.log(this.question)
     this.question['incorrect_answers'].push(this.question['correct_answer'])
     this.quizData.shuffle(this.question['incorrect_answers'])
-    console.log(this.question)
   }
 
   
   isAnswer = false
+  score = 0
   checkAnswer(answer){
-    
+
     if (answer == this.question['correct_answer']) {
       this.quizData.showSnackbarTrue("Correct Answer")
       this.num = this.num+1
       this.getQuiz(this.num)
       this.isAnswer = true;
+      this.score++
     }else{
       this.quizData.showSnackbarFalse("Wrong Answer")
       this.num = this.num+1
       this.getQuiz(this.num)
       this.isAnswer = true;
+    }
+    console.log(this.num)
+    if(this.num==10){
+      let data = {name: 'You', score: this.score , position: '1',question: '10 question', value: this.score*10}
+      this.userService.data.push(data)
+      console.log(this.userService.data)
+      this.router.navigate(['ranktable']);
     }
 
   }
