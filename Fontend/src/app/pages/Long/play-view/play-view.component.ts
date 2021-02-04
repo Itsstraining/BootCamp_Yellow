@@ -15,7 +15,7 @@ export class PlayComponent implements OnDestroy,OnInit {
   mobileQuery: MediaQueryList;
   public data;
   public answer:Array<any>;
-  fillerNav = Array.from({length: 20}, (_, i) => `Player ${i + 1}`+ ":" + " 10");
+  fillerNav = Array.from({length: 9}, (_, i) => `Player ${i + 1}`+ ":" + " 10");
 
   // fillerContent = Array.from({length: 10}, () =>
   //     `Player 1`);
