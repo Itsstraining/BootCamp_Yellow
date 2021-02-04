@@ -42,8 +42,8 @@ app.get('/', async (req, res) => {
     }
     data = dataAmount;
   }
-  console.log(data)
-  res.send(data)
+  //console.log(data)
+  res.send({quiz:data})
 
 })
 
