@@ -1,0 +1,47 @@
+.example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+   
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    width: 490px;
+    
+  }
+  
+  .example-button-row .mat-button-base {
+    margin: 50px 8px 8px 139vh;
+    
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+  
+
+  .score{
+    border: 1.8px solid #BFBFBF;
+    box-shadow: 8px 8px 4px #aaaaaa;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+  }
+
+  mat-progress-bar{
+    height: 20px;
+    width: 140vh;
+    border-radius: 10px;
+  }
