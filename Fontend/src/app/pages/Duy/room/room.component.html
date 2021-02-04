@@ -1,12 +1,23 @@
 <div id="body">
-    <div id="room-id">
-        <button [routerLink]="['/menuhome']" routerLinkActive="router-link-active" id="back" mat-raised-button>
+  <div id="room-id">
+    <button
+      [routerLink]="['/menuhome']"
+      routerLinkActive="router-link-active"
+      id="back"
+      mat-raised-button
+    >
       Back
     </button>
-        <h1>Room ID</h1>
-        <button [routerLink]="['/mainplay']" routerLinkActive="router-link-active" id="start" mat-raised-button>
+    <h1>Room ID</h1>
+    <button
+      [routerLink]="['/mainplay']"
+      routerLinkActive="router-link-active"
+      id="start"
+      mat-raised-button
+    >
       Start
     </button>
+
   </div>
 
   <div id="player" style="height: 400px">
@@ -19,6 +30,7 @@
         <div class="parent white">
             <app-playerlist></app-playerlist>
             <!-- <table>
+>>>>>>> 17a70bafab404c1173f942616f9c00af6405042a
         <tr>
           <td>
             <button mat-raised-button value="text"></button>
@@ -53,10 +65,13 @@
           <td><button mat-raised-button value="text">P20</button></td>
         </tr>
       </table> -->
-        </div>
     </div>
+  </div>
 </div>
 
 <audio autoplay loop>
-  <source src="../../../../assets/Audio/kahoot-full-original-soundtrack-as-of-2018.mp3" type="audio/ogg">
-  </audio>
+  <source
+    src="../../../../assets/Audio/kahoot-full-original-soundtrack-as-of-2018.mp3"
+    type="audio/ogg"
+  />
+</audio>
