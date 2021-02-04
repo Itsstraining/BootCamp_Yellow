@@ -1,9 +1,15 @@
 <div id="body">
     <div id="room-id">
-        <button id="back" mat-raised-button>Back</button>
+        <button [routerLink]="['/menuhome']" routerLinkActive="router-link-active" id="back" mat-raised-button>
+      Back
+    </button>
         <h1>Room ID</h1>
-        <button id="start" mat-raised-button>Start</button>
+        <button [routerLink]="['/mainplay']" routerLinkActive="router-link-active" id="start" mat-raised-button>
+      Start
+    </button>
     </div>
+
+
     <div id="add">
         <button mat-raised-button style="margin-top: 100px">Add</button>
         <button mat-raised-button style="margin-top: 100px">Rm</button>
