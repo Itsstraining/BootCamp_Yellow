@@ -1,28 +1,29 @@
 .body {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  justify-content: center;
-  text-align: center;
-  flex: 1 0 auto;
-  padding: 0px 0.625rem;
-  background-image: url("../../../../assets/Duy/Background\ Quiz.jpg");
-  height: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1 0 auto;
+    padding: 0px 0.625rem;
+    height: 100%;
 }
+
 #logo-container {
-  padding-top: 4.25rem;
-  padding-bottom: 1.5rem;
-  color: #3f51b5;
-  font-size: 100px;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
+    padding-top: 4.25rem;
+    padding-bottom: 1.5rem;
+    color: #3f51b5;
+    font-size: 100px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
 }
+
 button {
-  margin-top: 50px;
-  width: 200px;
-  color: rgb(243, 240, 237);
-  background-color: #3f51b5;
-  font-size: 30px;
+    margin-top: 50px;
+    width: 200px;
+    color: rgb(243, 240, 237);
+    background-color: #3f51b5;
+    font-size: 30px;
 }

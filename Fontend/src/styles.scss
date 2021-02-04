@@ -14,7 +14,7 @@ body {
 }
 
 .mat-typography {
-    font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
+    font: 500 30px/45px Roboto, "Helvetica Neue", sans-serif;
     letter-spacing: normal;
     text-align: -webkit-center;
 }
@@ -25,7 +25,7 @@ body {
 
 @keyframes change {
     0% {
-        background-color: aquamarine;
+        background-color: rgb(225, 178, 172);
     }
     25% {
         background-color: rgb(65, 196, 222);
