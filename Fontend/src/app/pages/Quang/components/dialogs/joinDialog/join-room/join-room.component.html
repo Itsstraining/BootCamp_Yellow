@@ -1,11 +1,11 @@
 <div mat-dialog-content>
-    <p><b>Room ID ?</b></p>
+    <p style="font-size: 25px;"><b>Room ID ?</b></p>
     <mat-form-field>
-        <mat-label></mat-label>
+
         <input matInput>
     </mat-form-field>
 </div>
 <div mat-dialog-actions class="button">
-    <button mat-button (click)="onNoClick()">No Thanks</button>
-    <button mat-button cdkFocusInitial>Join Now</button>
+    <button mat-button (click)="onNoClick()" style="font-size: 15px;">No Thanks</button>
+    <button [routerLink]="['/room']" [mat-dialog-close]="true" routerLinkActive="router-link-active" mat-button>Join Now</button>
 </div>

@@ -1,46 +1,46 @@
-
-
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
     <!-- <mat-toolbar color="primary" class="example-toolbar">
         <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
       </mat-toolbar> -->
     <mat-sidenav-container class="example-container">
-  
-      
-      <mat-sidenav style="width: 10%" mode="side" opened>
-        <h1 style="background-color: #3f51b5" class="example-app-name">
-          Player list
-        </h1>
-        <mat-nav-list>
-          <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{
+
+
+        <mat-sidenav style="width: 10%" mode="side" opened>
+            <h1 style="background-color: #3f51b5" class="example-app-name">
+                Player list
+            </h1>
+            <mat-nav-list>
+                <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{
             nav
           }}</a>
-        </mat-nav-list>
-      </mat-sidenav>
-      <mat-sidenav-content>
-          <app-timer></app-timer>
-        <h1 style="text-align: center; margin: 10vh; font-size: 5vh; color: white;">
-          Quiz 1/10
-        </h1>
-        <h2 style="text-align: justify; margin: 10vh; color: white; font-size: 4vh;">Quiz description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quibusdam repudiandae recusandae incidunt nemo, quod nam magni non, eius eum harum quia totam officiis eaque eligendi, quisquam fugit minus vitae.</h2>
-  
-        <!-- <div class="example-button-row">
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <app-timer></app-timer>
+            <h1 style="text-align: center; margin: 10vh; font-size: 5vh; color: white;">
+                Quiz 1/10
+            </h1>
+            <h2 style="text-align: justify; margin: 10vh; color: white; font-size: 4vh;">Quiz description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quibusdam repudiandae recusandae incidunt nemo, quod nam magni non, eius eum harum quia totam officiis eaque eligendi, quisquam fugit minus vitae.</h2>
+
+            <!-- <div class="example-button-row">
           
           
          
          
         </div> -->
-  
-        <mat-grid-list cols="2" rowHeight="6:1">
-          <mat-grid-tile><button class="bt" mat-raised-button color="primary">A. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatem aut impedit assumenda adipisci eius magnam placeat! Aspernatur .</button></mat-grid-tile>
-          <mat-grid-tile><button class="bt" mat-raised-button color="primary">B.</button></mat-grid-tile>
-          <mat-grid-tile><button class="bt" mat-raised-button color="primary">C.</button></mat-grid-tile>
-          <mat-grid-tile><button class="bt" mat-raised-button color="primary">D.</button></mat-grid-tile>
-        </mat-grid-list>
-       
-       
-      </mat-sidenav-content>
+
+            <mat-grid-list cols="2" rowHeight="6:1">
+                <mat-grid-tile><button class="bt" mat-raised-button color="primary">A. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatem aut impedit assumenda adipisci eius magnam placeat! Aspernatur .</button></mat-grid-tile>
+                <mat-grid-tile><button class="bt" mat-raised-button color="primary">B.</button></mat-grid-tile>
+                <mat-grid-tile><button class="bt" mat-raised-button color="primary">C.</button></mat-grid-tile>
+                <mat-grid-tile><button class="bt" mat-raised-button color="primary">D.</button></mat-grid-tile>
+            </mat-grid-list>
+
+
+        </mat-sidenav-content>
     </mat-sidenav-container>
-  </div>
-  
-  
+</div>
+
+<audio autoplay loop>
+    <source src="../../../../assets/Audio/kahoot-full-original-soundtrack-as-of-2018 (1).mp3" type="audio/ogg">
+    </audio>

@@ -3,53 +3,67 @@
 // body{
 //     background-color: blueviolet;
 //   }
-<<<<<<< HEAD
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 // html, body { height: 100%; }
 // body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-// html, body { height: 100%; }
-// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-=======
 html,
 body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
->>>>>>> a5dd214e468a62b881964b07b30c9f2b8ecc1ac7
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-html,
-body {
-  height: 100%;
+    height: 100%;
 }
 
 body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 .mat-typography {
-  font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
-  letter-spacing: normal;
-  text-align: -webkit-center;
+    font: 500 30px/45px Roboto, "Helvetica Neue", sans-serif;
+    letter-spacing: normal;
+    text-align: -webkit-center;
+    font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
+    letter-spacing: normal;
+    text-align: -webkit-center;
 }
 
 body {
-  animation: change 10s infinite;
+    animation: change 10s infinite;
 }
 
 @keyframes change {
-<<<<<<< HEAD
+    0% {
+        background-color: rgb(225, 178, 172);
+    }
+    25% {
+        background-color: rgb(65, 196, 222);
+    }
+    50% {
+        background-color: rgb(140, 199, 63);
+    }
+    75% {
+        background-color: rgb(243, 211, 51);
+    }
+    100% {
+        background-color: rgb(247, 142, 86);
+    }
     0% {
         background-color: aquamarine;
     }
@@ -65,21 +79,4 @@ body {
     100% {
         background-color: rgb(247, 142, 86);
     }
-=======
-  0% {
-    background-color: aquamarine;
-  }
-  25% {
-    background-color: rgb(65, 196, 222);
-  }
-  50% {
-    background-color: rgb(140, 199, 63);
-  }
-  75% {
-    background-color: rgb(243, 211, 51);
-  }
-  100% {
-    background-color: rgb(247, 142, 86);
-  }
->>>>>>> a5dd214e468a62b881964b07b30c9f2b8ecc1ac7
 }
