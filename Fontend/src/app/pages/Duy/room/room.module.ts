@@ -6,14 +6,18 @@ import { RoomComponent } from './room.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { PlayerlistComponent } from './components/playerlist/playerlist.component';
+import { PlayerComponent } from './components/player/player.component';
 @NgModule({
-  declarations: [RoomComponent],
+  declarations: [RoomComponent, PlayerlistComponent, PlayerComponent],
   imports: [
     CommonModule,
     RoomRoutingModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatCardModule,
   ],
 })
 export class RoomModule {}

@@ -10,6 +10,7 @@ export interface DialogData {
   templateUrl: './join-room.component.html',
   styleUrls: ['./join-room.component.scss']
 })
+
 export class JoinRoomComponent {
 
   constructor(
@@ -18,6 +19,8 @@ export class JoinRoomComponent {
 
   onNoClick(): void {
     this.dialogRef.close();
+  } 
+  closeDialog() {
+    this.dialogRef.close('');
   }
-
 }

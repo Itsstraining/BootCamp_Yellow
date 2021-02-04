@@ -1,34 +1,19 @@
 <div>
-    <h1>QUIZ BATTLE</h1>
+    <div id="logo-container">Quiz Battle</div>
     <section>
         <div class="example-button-row">
-            <button mat-raised-button color="primary">Play Now</button>
-            <button mat-raised-button color="accent" mat-raised-button (click)="openDialog()">Join Room</button>
-            <button mat-raised-button color="warn" mat-raised-button (click)="openDialogCreate()">Create Room</button>
+            <button [routerLink]="['/room']" routerLinkActive="router-link-active" mat-raised-button color="primary" style="font-size: 30px;">Play Now</button>
+            <button mat-raised-button color="primary" mat-raised-button (click)="openDialog()" style="font-size: 30px;">Join Room</button>
+            <button mat-raised-button color="primary" mat-raised-button (click)="openDialogCreate()" style="font-size: 30px;">Create Room</button>
+            <button [routerLink]="['/login']" routerLinkActive="router-link-active" mat-raised-button color="primary" style="font-size: 30px;">Back to Login</button>
         </div>
     </section>
 
     <style>
-        body {
-            animation: change 10s infinite;
-        }
-        
-        @keyframes change {
-            0% {
-                background-color: aquamarine;
-            }
-            25% {
-                background-color: rgb(65, 196, 222);
-            }
-            50% {
-                background-color: rgb(140, 199, 63);
-            }
-            75% {
-                background-color: rgb(243, 211, 51);
-            }
-            100% {
-                background-color: rgb(247, 142, 86);
-            }
-        }
+
     </style>
 </div>
+
+<audio autoplay loop>
+    <source src="../../../../assets/Audio/kahoot-lobby-music.mp3" type="audio/ogg">
+    </audio>
