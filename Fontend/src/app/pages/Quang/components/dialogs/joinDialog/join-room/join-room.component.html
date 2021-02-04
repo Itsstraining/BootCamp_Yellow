@@ -1,1 +1,11 @@
-<p>join-room works!</p>
+<div mat-dialog-content>
+    <p><b>Room ID ?</b></p>
+    <mat-form-field>
+        <mat-label></mat-label>
+        <input matInput>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions class="button">
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button cdkFocusInitial>Join Now</button>
+</div>
