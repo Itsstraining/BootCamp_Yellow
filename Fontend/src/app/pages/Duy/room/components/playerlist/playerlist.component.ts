@@ -11,10 +11,13 @@ export class PlayerlistComponent implements OnInit {
 
   playerList: Array<Player> = [
     {
-      name: 'long',
+      name: 'Long',
     },
-    { name: 'di' },
-    { name: 'cho' },
+    { name: 'Kiệt' },
+    { name: 'Quang' },
+    {
+      name: 'Đức',
+    },
   ];
 
   ngOnInit(): void {}
