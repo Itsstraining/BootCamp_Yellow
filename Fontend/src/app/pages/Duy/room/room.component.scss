@@ -1,0 +1,40 @@
+#room-id {
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  color: rgb(241, 241, 240);
+  width: 200px;
+  height: 50px;
+  background-color: #3f51b5;
+  font-size: 30px;
+}
+
+#key {
+  display: flex;
+  justify-content: center;
+}
+#player {
+  margin-top: 100px;
+}
+
+#players {
+  width: 200px;
+}
+table {
+  display: grid;
+  justify-content: center;
+  margin-top: 100px;
+  border-collapse: collapse;
+  width: 100%;
+}
+h1 {
+  color: rgb(170, 45, 62);
+  font-size: 50px;
+  margin-top: 10px;
+}
+#body {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../../assets/Duy/Background\ Quiz.jpg");
+}

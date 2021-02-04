@@ -6,11 +6,23 @@ import { HomeMenuComponent } from './home-menu.component';
 import { CreateRoomComponent } from '../components/dialogs/createDialog/create-room/create-room.component';
 import { JoinRoomComponent } from '../components/dialogs/joinDialog/join-room/join-room.component';
 
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [HomeMenuComponent, CreateRoomComponent, JoinRoomComponent],
   imports: [
     CommonModule,
-    HomeMenuRoutingModule
+    HomeMenuRoutingModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatSelectModule
   ]
 })
 export class HomeMenuModule { }
