@@ -3,7 +3,6 @@
 // body{
 //     background-color: blueviolet;
 //   }
-
 html,
 body {
     height: 100%;
@@ -34,47 +33,80 @@ body {
 }
 
 .mat-typography {
-    font: 500 30px/45px Roboto, "Helvetica Neue", sans-serif;
+    // font: 500 30px/45px Roboto, "Helvetica Neue", sans-serif;
     letter-spacing: normal;
     text-align: -webkit-center;
-    font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
+    font: 400 0px/45px Roboto, "Helvetica Neue", sans-serif;
     letter-spacing: normal;
     text-align: -webkit-center;
 }
 
 body {
-    animation: change 10s infinite;
+    animation: change 100s infinite;
 }
 
 @keyframes change {
     0% {
         background-color: rgb(225, 178, 172);
     }
-    25% {
+    5% {
         background-color: rgb(65, 196, 222);
     }
-    50% {
+    10% {
         background-color: rgb(140, 199, 63);
     }
-    75% {
+    15% {
         background-color: rgb(243, 211, 51);
     }
-    100% {
+    20% {
         background-color: rgb(247, 142, 86);
-    }
-    0% {
-        background-color: aquamarine;
     }
     25% {
-        background-color: rgb(65, 196, 222);
+        background-color: rgb(255, 134, 178);
+    }
+    30% {
+        background-color: rgb(106, 90, 205);
+    }
+    35% {
+        background-color: rgb(80, 0, 34);
+    }
+    40% {
+        background-color: rgb(78, 109, 75);
+    }
+    45% {
+        background-color: rgb(236, 109, 75);
     }
     50% {
-        background-color: rgb(140, 199, 63);
+        background-color: rgb(236, 109, 122);
+    }
+    55% {
+        background-color: rgb(35, 255, 147);
+    }
+    60% {
+        background-color: rgb(60, 60, 60);
+    }
+    65% {
+        background-color: rgb(179, 147, 90);
+    }
+    70% {
+        background-color: rgb(10, 150, 124);
     }
     75% {
-        background-color: rgb(243, 211, 51);
+        background-color: rgb(150, 66, 95);
+    }
+    80% {
+        background-color: rgb(60, 179, 113);
+    }
+    85% {
+        background-color: rgb(89, 143, 242);
+    }
+    90% {
+        background-color: rgb(89, 143, 140);
+    }
+    95% {
+        background-color: rgb(89, 143, 41);
     }
     100% {
-        background-color: rgb(247, 142, 86);
+        background-color: rgb(152, 109, 111);
     }
 }
