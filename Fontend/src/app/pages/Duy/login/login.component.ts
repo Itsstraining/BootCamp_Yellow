@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
           this.user.uid
         );
       }
+      this.userService.user = this.user
       this.router.navigate(['menuhome']);
     } catch (err) {
       alert(err);

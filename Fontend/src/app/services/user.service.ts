@@ -71,7 +71,7 @@ export class UserService {
     },
   ];
   constructor(private httpClient: HttpClient) {}
-
+  user = null;
   async createUser(displayName, email, photoURL, uid) {
     await this.httpClient
       .post('http://127.0.0.1:7009/user', {
@@ -79,6 +79,18 @@ export class UserService {
         email: email,
         photoURL: photoURL,
         id: uid,
+      })
+      .toPromise()
+      .then((e) => {
+        console.log(e);
+      });
+    //console.log(this.data)
+  }
+
+  async getUser( uid) {
+    await this.httpClient
+      .get('http://127.0.0.1:7009/user?uid'+uid, {
+        
       })
       .toPromise()
       .then((e) => {

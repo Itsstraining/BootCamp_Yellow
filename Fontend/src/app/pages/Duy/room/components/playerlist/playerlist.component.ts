@@ -10,14 +10,14 @@ export class PlayerlistComponent implements OnInit {
   constructor() {}
 
   playerList: Array<Player> = [
-    {
-      name: 'Long',
-    },
-    { name: 'Kiệt' },
-    { name: 'Quang' },
-    {
-      name: 'Đức',
-    },
+    // {
+    //   name: 'Long',
+    // },
+    // { name: 'Kiệt' },
+    // { name: 'Quang' },
+    // {
+    //   name: 'Đức',
+    // },
   ];
 
   ngOnInit(): void {}

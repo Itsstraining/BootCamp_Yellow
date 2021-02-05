@@ -7,7 +7,7 @@ const app = express();
 var admin = require("firebase-admin");
 
 var serviceAccount = require("./key.json");
-
+let db = "https://itss-demo-21s-default-rtdb.firebaseio.com";
 function init() {
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
@@ -19,10 +19,13 @@ function init() {
   console.log("Database is connect.");
 }
 
-let quizdata = [];
-
 init();
 
+app.get("/check", async (req, res) => {
+  let temp =await admin.database().ref("room001").get()
+  console.log(temp);
+  res.send(temp)
+});
 app.get("/", async (req, res) => {
   let { category, amount } = req.query;
   console.log(category);
@@ -62,6 +65,19 @@ app.get("/", async (req, res) => {
 //   }
 
 // })
+app.get("/user", async (req, res) => {
+  const { uid } = req.query;
+  try {
+    let a = await admin.firestore().collection("user").doc(uid).get();
+    if (!a.exists) {
+      res.send(`${id} has not exists`);
+    } else {
+      res.send(a.data());
+    }
+  } catch (error) {
+    console.log(error);
+  }
+});
 app.post("/user", async (req, res) => {
   const { id, displayName, email, photoURL } = req.body;
   console.log(id, displayName, email, photoURL);
@@ -82,18 +98,36 @@ app.post("/user", async (req, res) => {
     console.log(error);
   }
 });
+app.get("/room", async (req, res) => {
+  let { owner } = req.query;
+  let room = await admin.firestore().collection("rooms").doc(owner).get();
 
+  try {
+    if (room.exists) {
+      res.send(room.data());
+      return;
+    } else {
+      res.send("error");
+    }
+  } catch (error) {
+    console.log(error);
+  }
+});
 app.post("/room", async (req, res) => {
-  let { category, owner, numOfPlayers } = req.body;
-  console.log(category);
+  let { category, owner, quantity } = req.body;
+  let room = await admin.firestore().collection("rooms").doc(owner).get();
+  if (room.exists) {
+    res.send("room is exists");
+    return;
+  }
   let data = {
     category: category,
     owner: owner,
-    numOfPlayers: numOfPlayers,
+    quantity: quantity,
     status: false,
   };
   try {
-    await admin.firestore().collection("rooms").doc().set(data);
+    await admin.firestore().collection("rooms").doc(owner).create(data);
     res.send("new room created");
   } catch (error) {
     console.log(error);
@@ -103,6 +137,7 @@ app.post("/room", async (req, res) => {
 app.put("/room/join", async (req, res) => {
   try {
     let { id, uid } = req.body;
+
     let data = await admin.firestore().collection("rooms").doc(id).get();
     let temp = data.data();
     console.log(temp);
