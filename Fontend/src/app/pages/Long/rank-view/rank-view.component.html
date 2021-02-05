@@ -3,39 +3,30 @@
   <div>
     <div
       *ngFor="let item of data"
-      style="padding: 15px; display: flex; justify-content: center"
+      style="padding: 15px; display: flex;"
     >
       <img
         src="../../../../assets/number-{{ item.position }}.png"
         alt="no.1 picture"
         height="25px"
         width="25px"
-        style="padding-right: 5px"
+        style="padding-right: 5px;"
       />
-      <div
-        style="
-          width: 10px;
-          padding-top: 5px;
-          padding-right: 10vh;
-          font-size: 20px;
-        "
-      >
+      <div style="width: 10px; padding-top: 3px; padding-right: 11vh;font-size: 20px">
         {{ item.name }}
       </div>
       <mat-progress-bar
         mode="determinate"
         value="{{ item.value }}"
       ></mat-progress-bar>
-      <div style="padding-top: 5px; font-size: 20px; padding-left: 10px">
-        {{ item.score }}
+      <div style="padding-top: 3px; font-size: 20px; padding-left: 10px;">
+        {{ item.question }}
       </div>
     </div>
   </div>
+</div>
 
-  <div class="example-button-row">
-    <button [routerLink]="['/menuhome']" routerLinkActive="router-link-active"  mat-raised-button color="primary" style="font-size: 25px">
-      Home
-    </button>
-    <button [routerLink]="['/room']" routerLinkActive="router-link-active" mat-raised-button color="warn" style="font-size: 25px">Back</button>
-  </div>
+<div class="example-button-row">
+  <button [routerLink]="['menuhome']" routerLinkActive="router-link-active"  mat-raised-button color="primary" style="font-size: 25px;">Home</button>
+  <button [routerLink]="['room']" routerLinkActive="router-link-active" mat-raised-button color="warn" style="font-size: 25px;"> Back</button>
 </div>
