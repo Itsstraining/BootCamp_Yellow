@@ -26,6 +26,7 @@ app.get("/check", async (req, res) => {
   console.log(temp);
   res.send(temp)
 });
+
 app.get("/", async (req, res) => {
   let { category, amount } = req.query;
   console.log(category);
