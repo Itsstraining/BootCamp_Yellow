@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router, RouterLink } from '@angular/router';
 import * as firebase from 'firebase';
+import { LoginService } from 'src/app/services/login.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private userService: UserService,
     public auth: AngularFireAuth,
-    public router: Router
+    public router: Router,
+    public player: LoginService
   ) {}
   public user = null;
   async login() {
@@ -39,7 +41,11 @@ export class LoginComponent implements OnInit {
     this.auth.authState.subscribe((auth) => {
       if (this.user == null) {
         this.user = auth;
+        this.player.getUser(this.user);
       }
     });
+  }
+  ngOnDestroy(): void {
+    this.user = null;
   }
 }

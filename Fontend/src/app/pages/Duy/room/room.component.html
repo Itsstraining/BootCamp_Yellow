@@ -17,20 +17,14 @@
     >
       Start
     </button>
-
   </div>
 
   <div id="player" style="height: 400px">
     <div id="key">
-      <mat-card>Duy</mat-card>
+      <mat-card>{{ owner.user.displayName }}</mat-card>
     </div>
-
-
-
-    
-        <div class="parent white">
-        <app-playerlist></app-playerlist>
-            
+    <div class="parent white">
+      <app-playerlist></app-playerlist>
     </div>
   </div>
 </div>
