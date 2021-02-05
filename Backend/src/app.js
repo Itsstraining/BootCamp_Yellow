@@ -6,7 +6,7 @@ const app = express();
 
 var admin = require("firebase-admin");
 
-var serviceAccount = require("../key.json");
+var serviceAccount = require("./key.json");
 
 function init() {
   admin.initializeApp({
@@ -63,18 +63,20 @@ app.get("/", async (req, res) => {
 
 // })
 app.post("/user", async (req, res) => {
-  const { id } = req.query;
+  const { id, displayName, email, photoURL } = req.body;
+  console.log(id, displayName, email, photoURL);
   try {
-    let a = (await admin.firestore().collection("user").doc(id).get()).data();
-    if (a == null) {
-      let data = await admin
-        .firestore()
-        .collection("user")
-        .doc(id)
-        .set({ id: id });
-      res.send(data.data());
-    } else {
+    let a = await admin.firestore().collection("user").doc(id).get();
+    if (!a.exists) {
+      await admin.firestore().collection("user").doc(id).create({
+        id: id,
+        displayName: displayName,
+        email: email,
+        photoURL: photoURL,
+      });
       res.send(`${id} has been created`);
+    } else {
+      res.send(`${id} has been exist`);
     }
   } catch (error) {
     console.log(error);
