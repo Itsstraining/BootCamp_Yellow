@@ -98,4 +98,9 @@ export class UserService {
       });
     //console.log(this.data)
   }
+
+  async getUsers(){
+    let users = await this.httpClient.get('http://127.0.0.1:7009/roomRT?rid=kNTlAEaaLBUVzYAgjXgKLenynO03').toPromise()
+    return users
+  }
 }
