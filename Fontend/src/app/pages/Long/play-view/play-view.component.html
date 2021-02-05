@@ -13,32 +13,32 @@
                 <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{
             nav
           }}</a>
-        </mat-nav-list>
-      </mat-sidenav>
-      <mat-sidenav-content>
-          <app-timer [check]="isAnswer" [numOfQuestion]="num" (newTimeOutEvent)="timeOut($event)" (newAnswerEvent)="isAns($event)"></app-timer>
-        <h1 style="text-align: center; margin: 10vh; font-size: 5vh; color: white;">
-          Quiz {{num+1}}/10
-        </h1>
-        <h2 style="text-align: justify; margin: 10vh; color: white; font-size: 4vh;">{{question.question}}</h2>
-  
-          
-          
-         
-         
-  
-        <mat-grid-list *ngIf="data" cols="2" rowHeight="6:1" >
-          <mat-grid-tile><button (click)="checkAnswer(question.incorrect_answers[0])" class="bt" mat-raised-button color="primary">A. {{question.incorrect_answers[0]}}</button></mat-grid-tile>
-          <mat-grid-tile><button (click)="checkAnswer(question.incorrect_answers[1])" class="bt" mat-raised-button color="primary">B. {{question.incorrect_answers[1]}}</button></mat-grid-tile>
-          <mat-grid-tile (click)="checkAnswer(question.incorrect_answers[2])" *ngIf="question.incorrect_answers[2]"><button class="bt" mat-raised-button color="primary">C. {{question.incorrect_answers[2]}}</button></mat-grid-tile>
-          <mat-grid-tile (click)="checkAnswer(question.incorrect_answers[3])" *ngIf="question.incorrect_answers[3]"><button class="bt" mat-raised-button color="primary">D. {{question.incorrect_answers[3]}}</button></mat-grid-tile>
-        </mat-grid-list>
-       
-       
-      </mat-sidenav-content>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <app-timer [check]="isAnswer" [numOfQuestion]="num" (newTimeOutEvent)="timeOut($event)" (newAnswerEvent)="isAns($event)"></app-timer>
+            <h1 style="text-align: center; margin: 10vh; font-size: 5vh; color: white;">
+                Quiz {{num+1}}/10
+            </h1>
+            <h2 style="text-align: justify; margin: 10vh; color: white; font-size: 4vh;">{{question.question}}</h2>
+
+
+
+
+
+
+            <mat-grid-list *ngIf="data" cols="2" rowHeight="6:1">
+                <mat-grid-tile><button (click)="checkAnswer(question.incorrect_answers[0])" class="bt" mat-raised-button color="primary">A. {{question.incorrect_answers[0]}}</button></mat-grid-tile>
+                <mat-grid-tile><button (click)="checkAnswer(question.incorrect_answers[1])" class="bt" mat-raised-button color="primary">B. {{question.incorrect_answers[1]}}</button></mat-grid-tile>
+                <mat-grid-tile (click)="checkAnswer(question.incorrect_answers[2])" *ngIf="question.incorrect_answers[2]"><button class="bt" mat-raised-button color="primary">C. {{question.incorrect_answers[2]}}</button></mat-grid-tile>
+                <mat-grid-tile (click)="checkAnswer(question.incorrect_answers[3])" *ngIf="question.incorrect_answers[3]"><button class="bt" mat-raised-button color="primary">D. {{question.incorrect_answers[3]}}</button></mat-grid-tile>
+            </mat-grid-list>
+
+
+        </mat-sidenav-content>
     </mat-sidenav-container>
 </div>
 
 <audio autoplay loop>
-    <source src="../../../../assets/Audio/kahoot-full-original-soundtrack-as-of-2018 (1).mp3" type="audio/ogg">
+    <source src="../../../../assets/Audio/nhac-xo-so-kien-thiet-mien-bac-ban-kinh-dien.mp3" type="audio/ogg">
     </audio>

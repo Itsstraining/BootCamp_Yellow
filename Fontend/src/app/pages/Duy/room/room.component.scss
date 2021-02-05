@@ -1,6 +1,8 @@
 #room-id {
   display: flex;
   justify-content: space-between;
+  border-bottom: solid;
+  padding-bottom: 10px;
 }
 
 button {
@@ -16,14 +18,14 @@ button {
   justify-content: center;
 }
 mat-card {
-  width: 200px;
+  width: auto;
   background-color: #f44336;
   color: white;
   font-size: 40px;
   font-weight: bold;
 }
 #player {
-  margin-top: 400px;
+  margin-top: 100px;
   text-align: center;
 }
 
@@ -31,19 +33,11 @@ mat-card {
   width: 200px;
 }
 
-table {
-  display: grid;
-  justify-content: center;
-  margin-top: 100px;
-  border-collapse: collapse;
-  width: 100%;
-}
-
 h1 {
   color: #3f51b5;
-  font-size: 50px;
+  font-size: 100px;
   font-family: "Courier New", Courier, monospace;
-  margin-top: 20px;
+  margin-top: 100px;
   font-weight: bold;
 }
 
@@ -53,10 +47,10 @@ h1 {
 }
 
 #back {
-  margin-top: 10px;
+  margin-top: 200px;
   margin-left: 10px;
 }
 #start {
-  margin-top: 10px;
+  margin-top: 200px;
   margin-right: 10px;
 }

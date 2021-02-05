@@ -13,27 +13,27 @@
     </mat-form-field> -->
     <mat-form-field appearance="fill">
         <mat-label>Select number player</mat-label>
-        <mat-select style="font-size: 15px;">
+        <mat-select style="font-size: 15px;" (valueChange)="changePlayer($event)">
             <mat-option>None</mat-option>
-            <mat-option value="option1">5</mat-option>
-            <mat-option value="option2">10</mat-option>
-            <mat-option value="option3">15</mat-option>
+            <mat-option value="5">5</mat-option>
+            <mat-option value="10">10</mat-option>
+            <mat-option value="15">15</mat-option>
         </mat-select>
     </mat-form-field>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="fill1">
         <mat-label>Select category</mat-label>
-        <mat-select>
+        <mat-select  (valueChange)="changeCate($event)">
             <mat-option>None</mat-option>
-            <mat-option value="option1">Animals</mat-option>
-            <mat-option value="option2">Celebrities</mat-option>
-            <mat-option value="option3">Geography</mat-option>
-            <mat-option value="option4">History</mat-option>
-            <mat-option value="option5">Politics</mat-option>
-            <mat-option value="option6">Sports</mat-option>
-            <mat-option value="option7">Vehicles</mat-option>
+            <mat-option value="Animals">Animals</mat-option>
+            <mat-option value="Celebrities">Celebrities</mat-option>
+            <mat-option value="Geography">Geography</mat-option>
+            <mat-option value="History">History</mat-option>
+            <mat-option value="Politics">Politics</mat-option>
+            <mat-option value="Sports">Sports</mat-option>
+            <mat-option value="Vehicles">Vehicles</mat-option>
         </mat-select>
     </mat-form-field>
 </div>
 <div mat-dialog-actions class="button">
-    <button [routerLink]="['/room']" [mat-dialog-close]="true" routerLinkActive="router-link-active" mat-button cdkFocusInitial>Create</button>
+    <button (click) = "createRoom()" [mat-dialog-close]="true" routerLinkActive="router-link-active" mat-button cdkFocusInitial>Create</button>
 </div>
