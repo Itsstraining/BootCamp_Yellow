@@ -16,7 +16,6 @@ export class LoginComponent implements OnInit {
     try {
       await this.auth.signInWithPopup(provider);
       this.router.navigate(['menuhome']);
-      alert('logged in');
     } catch (err) {
       alert(err);
     }
