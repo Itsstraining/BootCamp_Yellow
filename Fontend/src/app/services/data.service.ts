@@ -16,8 +16,13 @@ export class DataService {
   durationInSeconds = 1;
   constructor(private httpClient: HttpClient,public snackBar: MatSnackBar) { }
 
+  public cat;
+  getCat(cat){
+    return this.cat = cat
+  }
+
   async getData(){
-    this.data = await this.httpClient.get("http://127.0.0.1:7009/?category=Vehicles&amount=10").toPromise()
+    this.data = await this.httpClient.get(`http://127.0.0.1:7009/?category=${this.cat}&amount=10`).toPromise()
     //console.log(this.data)
     return this.data['quiz']
   }
