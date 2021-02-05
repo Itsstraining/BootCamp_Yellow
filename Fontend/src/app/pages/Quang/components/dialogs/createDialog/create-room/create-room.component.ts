@@ -1,6 +1,7 @@
 import { Component, OnInit,Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/services/data.service';
 import { RoomService } from 'src/app/services/room.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -13,6 +14,7 @@ export class CreateRoomComponent implements OnInit {
 numberPlayer = 0;
 category = "";
   constructor(
+    private dataService:DataService,
     private roomService: RoomService,
     private userService: UserService,
     public dialogRef: MatDialogRef<CreateRoomComponent>,
@@ -26,6 +28,7 @@ category = "";
     this.dialogRef.close();
   }
   async createRoom(){
+    this.dataService.getCat(this.category)
     if(!this.numberPlayer || !this.category ){
       return;
     }
