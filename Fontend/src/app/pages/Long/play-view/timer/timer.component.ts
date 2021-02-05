@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-timer',
@@ -7,20 +7,46 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class TimerComponent implements OnInit, OnDestroy {
 
+  @Output() newTimeOutEvent = new EventEmitter<boolean>();
+  @Output() newAnswerEvent = new EventEmitter<boolean>();
+    public time = 11
+  @Input() public check: boolean;
 
-  public time = 61
-
+  @Input() public numOfQuestion: number;
   ngOnInit() {
     this.downTime()
   }
 
- ngOnDestroy() {
- }
+  ngOnDestroy() {
+  }
 
- downTime(){
-  this.time --
-  if(this.time!=0)
-    setTimeout(()=>this.downTime(),1000)
- }
+
+  downTime() {
+    if (this.check == true) {
+      this.check = !this.check
+      this.newAnswerEvent.emit(false);
+      this.time=11
+      this.downTime()
+      return
+    }
+    this.time--
+    if (this.time != 0) {
+      setTimeout(() => {
+        return this.downTime()
+      }, 1000)
+    } else if (this.time == 0) {
+      if (this.numOfQuestion == 9) {
+        this.time = 0;
+        return;
+      }
+      this.time = 10;
+      this.newTimeOutEvent.emit(true);
+      
+      setTimeout(() => {
+        return this.downTime()
+      }, 1000)
+    }
+
+  }
 
 }
