@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
 import { Player } from '../../models/player.model';
@@ -8,9 +9,12 @@ import { Player } from '../../models/player.model';
   styleUrls: ['./playerlist.component.scss'],
 })
 export class PlayerlistComponent implements OnInit {
-  constructor(public player: LoginService) {}
+  constructor(public player: LoginService, private httpClient: HttpClient) {
+    
+  }
 
   playerList: Array<Player> = [
+
     // {
     //   name: 'Long',
     // },
